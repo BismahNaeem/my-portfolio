@@ -15,7 +15,8 @@ const SkillSection = () => {
           <p>90%</p>
         </div>
         <div className="skill-content">
-          <Image src="/images/html.png" alt="HTML" />
+          <Image src="/images/html.png" alt="HTML"
+          height={500} width={500}/>
           
         </div>
       </div>
@@ -30,7 +31,8 @@ const SkillSection = () => {
           
         </div>
         <div className="skill-content">
-          <Image src="/images/css.png" alt="CSS" />
+          <Image src="/images/css.png" alt="CSS"
+          height={500} width={500} />
           
         </div>
       </div>
@@ -45,7 +47,8 @@ const SkillSection = () => {
           
         </div>
         <div className="skill-content">
-          <Image src="/images/js.png" alt="JavaScript" />
+          <Image src="/images/js.png" alt="JavaScript" 
+          height={500} width={500}/>
          
         </div>
       </div>

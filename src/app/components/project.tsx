@@ -44,7 +44,7 @@ const ProjectsSection = () => {
       <div className="projects-list">
         {projects.map((project) => (
           <div key={project.id} className="project-card">
-            <Image src={project.image} alt={project.title} className="thumbnail" />
+            <Image src={project.image} alt={project.title} className="thumbnail"height={500} width={500} />
             <div className="project-details">
               <h3 className="project-title">{project.title}</h3>
               <p className="project-description">{project.description}</p>

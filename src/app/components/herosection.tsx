@@ -21,6 +21,7 @@ const HeroSection = () => {
           src="/images/img.png"
           alt="my-pic"
           className="responsive-image"
+          height={500} width={500}
         />
       </div>
     </div>
