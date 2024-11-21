@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const HeroSection = () => {
@@ -16,9 +17,9 @@ const HeroSection = () => {
         <button className="hero-btn">Hire me</button>
       </div>
       <div className="hero-image">
-        <img
+        <Image
           src="/images/img.png"
-          alt="Headphones"
+          alt="my-pic"
           className="responsive-image"
         />
       </div>

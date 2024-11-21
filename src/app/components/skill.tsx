@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Image from 'next/image';
 
 const SkillSection = () => {
   return (
@@ -15,7 +15,7 @@ const SkillSection = () => {
           <p>90%</p>
         </div>
         <div className="skill-content">
-          <img src="/images/html.png" alt="HTML" />
+          <Image src="/images/html.png" alt="HTML" />
           
         </div>
       </div>
@@ -30,7 +30,7 @@ const SkillSection = () => {
           
         </div>
         <div className="skill-content">
-          <img src="/images/css.png" alt="CSS" />
+          <Image src="/images/css.png" alt="CSS" />
           
         </div>
       </div>
@@ -45,7 +45,7 @@ const SkillSection = () => {
           
         </div>
         <div className="skill-content">
-          <img src="/images/js.png" alt="JavaScript" />
+          <Image src="/images/js.png" alt="JavaScript" />
          
         </div>
       </div>

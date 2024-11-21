@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const AboutSection = () => {
@@ -7,14 +8,16 @@ const AboutSection = () => {
        
         <h2>ABOUT ME</h2>
         <p>
-          Hi, I'm <strong>Bisma Naeem</strong>, a passionate Frontend Developer
+          Hi, I am <strong>Bisma Naeem</strong>, a passionate Frontend Developer
           dedicated to creating seamless and visually appealing user experiences.
         </p>
       </div>
       <div className="about-center">
-        <img
-          src="/images/img.png" 
+        <Image
+          src="/images/img.png"
+          alt="my-pic" 
           className="about-image"
+          height={500}width={500}
         />
       </div>
       <div className="about-right">

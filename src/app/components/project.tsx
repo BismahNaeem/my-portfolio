@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Image from 'next/image';
 const ProjectsSection = () => {
   // Array of project data
   const projects = [
@@ -44,7 +44,7 @@ const ProjectsSection = () => {
       <div className="projects-list">
         {projects.map((project) => (
           <div key={project.id} className="project-card">
-            <img src={project.image} alt={project.title} className="thumbnail" />
+            <Image src={project.image} alt={project.title} className="thumbnail" />
             <div className="project-details">
               <h3 className="project-title">{project.title}</h3>
               <p className="project-description">{project.description}</p>
