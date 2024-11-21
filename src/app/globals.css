@@ -2,26 +2,436 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  padding: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* header styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: rgb(104, 2, 104);
+  color: white;
+  max-width: 1400px; 
+  margin: 0 auto;
+  
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-left: 112px;
+}
+
+.nav-buttons {
+  display: none;
+  list-style: none;
+  margin-right: 112px;
+}
+
+.nav-buttons li {
+  display: inline;
+  margin-right: 20px;
+  padding: 10px;
+}
+
+.nav-buttons a {
+  color: white;
+  text-decoration: none;
+}
+
+.sheet {
+  display: none;
+}
+
+.sheet-trigger {
+  display: none;
+}
+
+.sheet-content {
+  background-color: teal;
+}
+
+.sheet-content ul {
+  list-style: none;
+}
+
+.sheet-content li {
+  margin-top: 8px;
+}
+
+@media (min-width: 768px) {
+  .nav-buttons {
+      display: flex;
+  }
+  .sheet-trigger {
+      display: none;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@media (max-width: 767px) {
+  .sheet {
+      display: block;
+  }
+  .sheet-trigger {
+      display: block;
+  }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+/* Hero Section Styles */
+.hero-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem;
+  background-color: #f5f5f5;
+}
+
+.hero-text {
+  flex: 1;
+  max-width: 600px;
+  margin-left: 50px; 
+  
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  line-height: 1.4;
+  color: #000;
+}
+
+.hero-text h1 span {
+  color: purple; 
+}
+
+.hero-text p {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+.hero-btn {
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.5rem;
+  background-color: purple;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: rgb(155, 66, 155);
+}
+
+.hero-image {
+  flex: 1;
+  max-width: 350px;
+  text-align: center;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.responsive-image {
+  object-fit:cover;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-image {
+    margin-top: 1.5rem;
+  }
+}
+  /* about page styling */
+
+.about-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 2rem 0;
+  padding: 1rem;
+  background-color: gainsboro;
+}
+
+.about-left,
+.about-right {
+  flex: 1;
+  min-width: 250px;
+  padding: 6rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: larger;
+;}
+
+  .about-left,.about-right ,h2{color: purple;}
+
+
+.about-center {
+  flex: 1;
+  text-align: center;
+}
+
+.about-image {
+  max-width: 300px;
+  height: auto;
+  border-radius: 10%;
+  
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+  }
+
+  .about-left,
+  .about-right {
+    text-align: center;
+  }
+}
+/* Projects page styling*/
+.projects-section {
+  padding: 40px;
+  background-color: #f9f9f9;
+}
+
+.main-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+  color: purple;
+}
+
+.section-title {
+  font-size: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #555;
+}
+
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.thumbnail {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  border-bottom: 1px solid #ddd;
+}
+
+.project-details {
+  padding: 20px;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.project-description {
+  color: purple;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+/* Style for the "View My Project" button */
+.view-project-button {
+  background-color: purple;
+  color: white;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  margin-top: 5px;
+  transition: background-color 0.3s ease;
+  margin-left: 50px;
+  
+}
+
+.view-project-button:hover {
+  background-color: #4a148c; 
+}
+
+.view-project-button:focus {
+  outline: none;
+}
+/* Skill Section Styling */
+
+.skill-section {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.skill-section h1 {
+  font-size: 4rem;
+  color: purple;
+  
+}
+
+.skill-section p {
+  font-size: 1.5rem;
+  color: #777;
+}
+
+.skill-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.skill-bar-container {
+  width: 20%;
+  height: 10px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.skill-bar {
+  height: 100%;
+  background-color: #6a1b9a; /* Purple color for the loader bar */
+  border-radius: 10px;
+  
+  
+}
+
+.skill-content {
+  display: flex;
+  align-items: center;
+}
+
+.skill-content img {
+  width: 60px;
+  height: 80px;
+  margin-right: 15px;
+}
+
+.skill-content h3 {
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+.skill-content p {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Footer Styling */
+.footer {
+  background-color: purple;
+  padding: 30px 0;
+  color: white;
+  text-align: center;
+}
+
+.footer-content {
+  padding: 0 20px;
+}
+
+.social-links {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;  
+  gap: 15px;  /* Add space between icons */
+}
+
+.social-icon {
+  font-size: 25px;  /* Control the icon size */
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #f5f5f5;
+}
+
+.page-nav {
+  margin-bottom: 20px;
+}
+
+.page-nav a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.page-nav a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom p {
+  font-size: 12px;
+  color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .footer-content {
+    padding: 0 10px;
+  }
+
+  .social-icon {
+    font-size: 16px;  /* Slightly smaller icon size on tablet */
+  }
+
+  .page-nav a {
+    font-size: 14px;
+  }
+
+  .footer-bottom p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-icon {
+    font-size: 14px;  /* Even smaller icon size on mobile */
+  }
+
+  .page-nav a {
+    font-size: 12px;
   }
 }
